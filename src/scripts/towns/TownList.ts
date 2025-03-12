@@ -56,10 +56,24 @@ const pokeLeagueShop = () => new Shop([
 
 //Kanto Shops
 const ViridianCityShop = new Shop([
+    ItemList.Dungeon_ticket,
     ItemList.Pokeball,
+    ItemList.Greatball,
+    ItemList.Ultraball,
     ItemList.xAttack,
     ItemList.xClick,
-    ItemList.Dungeon_ticket,
+    ItemList.Lucky_egg,
+    ItemList.Dowsing_machine,
+    ItemList.Token_collector,
+    ItemList.Lucky_incense,
+    ItemList.SmallRestore,
+    ItemList.MediumRestore,
+    ItemList.LargeRestore,
+    new PokeballItem(GameConstants.Pokeball.Masterball, 1, GameConstants.Currency.money       , { multiplier: 1.00, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.money]}` }, 'Master Ball'),
+    new PokeballItem(GameConstants.Pokeball.Masterball, 75000   , GameConstants.Currency.dungeonToken, { multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.dungeonToken]}` }, 'Master Ball'),
+    new PokeballItem(GameConstants.Pokeball.Masterball, 3000    , GameConstants.Currency.questPoint  , { multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.questPoint]}` }, 'Master Ball'),
+    new PokeballItem(GameConstants.Pokeball.Masterball, 3000    , GameConstants.Currency.farmPoint   , { multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.farmPoint]}` }, 'Master Ball'),
+    new PokeballItem(GameConstants.Pokeball.Masterball, 250      , GameConstants.Currency.diamond     , { multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.diamond]}` }, 'Master Ball'),
 ]);
 const PewterCityShop = new Shop([
     ItemList.Pokeball,

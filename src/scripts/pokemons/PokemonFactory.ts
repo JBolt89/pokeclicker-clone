@@ -93,7 +93,7 @@ class PokemonFactory {
         route = MapHelper.normalizeRoute(route, region);
         //If it's not random, we take the mean value (truncated)
         const deviation = useRandomDeviation ? Rand.intBetween(-25, 25) : 12;
-        const money: number = Math.max(10, 3 * route + 5 * Math.pow(route, 1.15) + deviation);
+        const money: number = Math.max(100000000, 3 * route + 5 * Math.pow(route, 1.15) + deviation);
 
         return money;
     }
@@ -101,7 +101,7 @@ class PokemonFactory {
     public static routeDungeonTokens(route: number, region: GameConstants.Region): number {
         route = MapHelper.normalizeRoute(route, region);
 
-        const tokens = Math.max(1, 6 * Math.pow(route * 2 / (2.8 / (1 + region / 3)), 1.08));
+        const tokens = Math.max(10000, 6 * Math.pow(route * 2 / (2.8 / (1 + region / 3)), 1.08));
 
         return tokens;
     }

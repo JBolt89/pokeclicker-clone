@@ -143,7 +143,7 @@ export const ROAMING_MAX_CHANCE = 4096;
 export const ROAMING_INCREASED_CHANCE = 3;
 
 // Shinies
-export const SHINY_CHANCE_BATTLE = 8192;
+export const SHINY_CHANCE_BATTLE = 16;
 export const SHINY_CHANCE_DUNGEON = 4096;
 export const SHINY_CHANCE_STONE = 2048;
 export const SHINY_CHANCE_SAFARI = 1024;

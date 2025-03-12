@@ -44,7 +44,7 @@ class Party implements Feature {
             // Base power
             // Shiny pokemon help with a 100% boost
             // Resistant pokemon give a 100% boost
-            const partyClickBonus = this.activePartyPokemon.reduce((total, p) => total + p.clickAttackBonus(), 1);
+            const partyClickBonus = this.activePartyPokemon.reduce((total, p) => total + p.clickAttackBonus(), 1000);
             return Math.pow(partyClickBonus, 1.4);
         });
 
@@ -171,6 +171,7 @@ class Party implements Feature {
 
         for (const p of pokemon) {
             attack += this.calculateOnePokemonAttack(p, type1, type2, region, ignoreRegionMultiplier, includeBreeding, useBaseAttack, overrideWeather, ignoreLevel, includeTempBonuses);
+            attack += attack * 10000
         }
 
         const bonus = this.multiplier.getBonus('pokemonAttack');
