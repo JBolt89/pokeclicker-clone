@@ -171,7 +171,7 @@ class Party implements Feature {
 
         for (const p of pokemon) {
             attack += this.calculateOnePokemonAttack(p, type1, type2, region, ignoreRegionMultiplier, includeBreeding, useBaseAttack, overrideWeather, ignoreLevel, includeTempBonuses);
-            attack += attack * 10000
+            attack += attack * 10;
         }
 
         const bonus = this.multiplier.getBonus('pokemonAttack');
